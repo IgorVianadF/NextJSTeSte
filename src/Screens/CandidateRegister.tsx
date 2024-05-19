@@ -1,0 +1,56 @@
+import Link from "next/link";
+
+export const CandidateRegister = () => {
+  return (
+    <div className="flex flex-col justify-center items-center h-screen bg-zinc-700">
+      <nav className="bg-zinc-500 w-full">
+        <ul className="flex flex-row justify-around p-4">
+          <li className="text-zinc-200">
+            <Link href={""}>Teste1</Link>
+          </li>
+          <li className="text-zinc-200">
+            <Link href={""}>Teste2</Link>
+          </li>
+          <li className="text-zinc-200">
+            <Link href={""}>Teste3</Link>
+          </li>
+          <li className="text-zinc-200">
+            <Link href={""}>Teste4</Link>
+          </li>
+        </ul>
+      </nav>
+      <div className="flex flex-1 flex-col justify-evenly items-center">
+        <h2>Candidate Register</h2>
+        <form
+          className="flex flex-col gap-8 rounded border border-zinc-300 p-6"
+          action="GET"
+        >
+          <input
+            className="p-4 bg-zinc-800 text-zinc-300 rounded border-l-sky-100"
+            type="text"
+          />
+          <input
+            className="p-4 bg-zinc-800 text-zinc-300 rounded border-l-sky-100"
+            type="text"
+          />
+          <input
+            className="p-4 bg-zinc-800 text-neutral-300 rounded"
+            type="text"
+          />
+          <p>
+            <Link href={"/PasswordRec"}>esqueci minha senha</Link>
+          </p>
+        </form>
+        <p>
+          Já é cadastrado?{" "}
+          <Link className="text-zinc-200" href={"/CandidateLogin"}>
+            Faça log-in!
+          </Link>
+        </p>
+      </div>
+      <footer className="bg-white text-center text-zinc-900 w-full p-4">
+        testeteste
+      </footer>
+    </div>
+  );
+};
